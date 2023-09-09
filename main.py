@@ -1,7 +1,8 @@
 from utils import pandas as pd
 from utils import numpy as np
-from utils import kaggle
+import kaggle
 
+from kaggle.api.kaggle_api_extended import KaggleApi
 
-if __name__ == "__main__":
-    pass
+api = KaggleApi()
+api.authenticate()
