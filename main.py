@@ -4,6 +4,7 @@ import streamlit
 import kaggle
 import zipfile
 
+# Downloading dataset using Kaggle API
 from kaggle.api.kaggle_api_extended import KaggleApi
 
 api = KaggleApi()
