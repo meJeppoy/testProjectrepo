@@ -1,4 +1,3 @@
-import kaggle
 import zipfile
 import pandas as pd
 import streamlit as st
@@ -35,7 +34,11 @@ with dataset:
     )
 
     jobs_data = pd.read_csv("job_postings.csv")
-    st.write(jobs_data.head(10))
+    st.write(jobs_data.head(5))
+
+    st.subheader("Jobs ID distribution on the LinkedIn Jobs dataset")
+    minsalary_dist = pd.DataFrame(jobs_data["min_salary"].value_counts()).head(50)
+    st.bar_chart(minsalary_dist)
 
 
 with features:
